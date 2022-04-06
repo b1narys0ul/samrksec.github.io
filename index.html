@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>samrksec</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body translate="no">
+  <script src="main.js"></script>
+  <div class="container one">
+    <div class="content">
+      <div id="large-header" class="large-header" style="height: 973px">
+        <canvas id="one-canvas" width="1365" height="973"></canvas>
+        <h1 class="title">
+          <div class="dropdown">
+            <button onclick="list()" class="dropbtn">54MRK53C</button>
+            <div id="myDropdown" class="dropdown-content thin">
+              <a href="#">Twitter</a>
+              <a href="#">Github</a>
+              <a href="#">HTB</a>
+              <a href="#">THM</a>
+              <a href="#">Discord</a>
+            </div>
+          </div>
+        </h1>
+      </div>
+    </div>
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/TweenLite.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/easing/EasePack.min.js'></script>
+  <script src="main.js"></script>
+  <script>
+      function list() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+  </html>
